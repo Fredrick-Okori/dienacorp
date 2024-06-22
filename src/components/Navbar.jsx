@@ -7,24 +7,23 @@ import {
 const NavBar = () => {
     return (
         <Box
-            display="flex"
-            
             position="fixed"
+            top={{ base: 0, lg: 15 }}
+            left="50%"
+            transform="translateX(-50%)"
             zIndex={100}
             bg="var(--clr-primary-3)"
-            color='var(--clr-primary-10)'
-            width="100%"
-          maxW={1200}
-            top={{base:0, lg: 15}}
+            color="var(--clr-primary-10)"
+            width={{ base: "100%", md: "80%", lg: "70%" }}
+            maxW="1200px"
             boxShadow="md"
             rounded={{ base: 0, lg: 100 }}
+            px={4}
         >
             <Flex
-                width={{ base: '100%', md: '80%', lg: '70%' }}
                 justifyContent="space-between"
-              
                 alignItems="center"
-                p={7}
+                p={4}
             >
                 <Box display="flex" alignItems="center">
                     <img src="./img/white.png" alt="Logo" style={{ height: '40px' }} />
