@@ -7,6 +7,7 @@ const Card = ({ image, title, description }) => (
         borderRadius="md"
         overflow="hidden"
         boxShadow="md"
+        lazyLoading={true}
         bg={`url(${image})`}
         bgSize="cover"
         bgPosition="center"
@@ -18,7 +19,7 @@ const Card = ({ image, title, description }) => (
             left="0"
             width="100%"
             height="100%"
-            bg="rgba(355, 200, 209, 0.8)" // Using rgba for opacity
+            bg="rgba(251, 208, 217, 0.8)"// Using rgba for opacity
         />
         <VStack
             position="relative"

@@ -11,6 +11,7 @@ import { ChakraProvider } from '@chakra-ui/react'
 import NavBar from './components/Navbar'
 import HeroSection from './components/HeroSection'
 import ShowCase from './components/ShowCase'
+import Feature from './components/Feature'
 
 
 function App() {
@@ -23,7 +24,7 @@ function App() {
       <ChakraProvider>
         <NavBar />
         <HeroSection />
-  
+  <Feature/>
       </ChakraProvider>
     </>
   )

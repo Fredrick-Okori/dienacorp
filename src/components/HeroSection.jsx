@@ -38,8 +38,8 @@ const HeroSection = () => {
                    
                 </Text>
                 <Stack direction="row" spacing={4}>
-                    <Button color="#c13d60" size="lg">Contact us</Button>
-                    <Button color="#c13d60" size="lg">Call us today</Button>
+                    {/* <Button color="#c13d60" size="lg">Contact us</Button>
+                    <Button color="#c13d60" size="lg">Call us today</Button> */}
                 </Stack>
             </VStack>
             <ShowCase />
