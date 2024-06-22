@@ -21,7 +21,7 @@ const HeroSection = () => {
             <Box position="relative" zIndex={-100}  bg="blackAlpha.500"  />
             <VStack
                 display="flex"
-               
+               mt={20}
                 spacing={6}
                 textAlign="center"
                 color='var(--clr-primary-1)'
@@ -33,11 +33,13 @@ const HeroSection = () => {
                     color='var(--clr-primary-4)'
                 >Digitizing your ideas..</Heading>
                 <Text fontSize="xl" maxW="600px">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    Putting everything together will make your  idea even look fancier and more interesting. 
+                Get integrated systems that will make your idea greater
+                   
                 </Text>
                 <Stack direction="row" spacing={4}>
-                    <Button color="#c13d60" size="lg">Get Started for Free</Button>
-                    <Button color="#c13d60" size="lg">Talk to Sales</Button>
+                    <Button color="#c13d60" size="lg">Contact us</Button>
+                    <Button color="#c13d60" size="lg">Call us today</Button>
                 </Stack>
             </VStack>
             <ShowCase />

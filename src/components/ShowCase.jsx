@@ -1,7 +1,6 @@
 import { Box, Button, Grid, GridItem, Container, Text, VStack } from "@chakra-ui/react";
 
 const Card = ({ image, title, description }) => (
-    
     <Box
         mt={15}
         position="relative"
@@ -9,7 +8,6 @@ const Card = ({ image, title, description }) => (
         overflow="hidden"
         boxShadow="md"
         bg={`url(${image})`}
-
         bgSize="cover"
         bgPosition="center"
         height="100%"
@@ -20,7 +18,7 @@ const Card = ({ image, title, description }) => (
             left="0"
             width="100%"
             height="100%"
-            bg="var(--clr-primary-1)" // Adjust opacity here
+            bg="rgba(355, 200, 209, 0.8)" // Using rgba for opacity
         />
         <VStack
             position="relative"
@@ -32,47 +30,47 @@ const Card = ({ image, title, description }) => (
             align="start"
             spacing={2}
             justify="center"
-            color="white"
+            color="var(--clr-primary-1)"
         >
-            <Text fontWeight="bold" fontSize="xl">
+            <Text fontWeight="bold" fontSize="2xl">
                 {title}
             </Text>
             <Text>
                 {description}
             </Text>
-            <Button colorScheme="whiteAlpha" variant="outline">Shop now</Button>
+            <Button colorScheme="whiteAlpha" variant="outline">Get Started</Button>
         </VStack>
     </Box>
 );
 
 const ShowCase = () => (
     <Container maxW="container.xl">
-    <Grid templateColumns={{ base: "1fr", md: "2fr 1fr" }} gap={4}>
-        <GridItem>
-            <Card
-                image="./img/hero.jpg"
-                title="All dressed"
-                description="Dress that feels a little fancy for when pajamas aren’t cutting it"
-            />
-        </GridItem>
-        <GridItem>
-            <Grid templateRows="1fr 1fr" gap={4}>
-                <GridItem>
-                    <Card
-                        image="./img/hero.jpg"
-                        title="Topped off"
-                        description="Find the perfect top for any occasion"
-                    />
-                </GridItem>
-                <GridItem>
-                    <Card
-                        image="./img/hero.jpg"
-                        title="Go chic"
-                        description="Style that stands out"
-                    />
-                </GridItem>
-            </Grid>
-        </GridItem>
+        <Grid templateColumns={{ base: "1fr", md: "2fr 1fr" }} gap={4}>
+            <GridItem>
+                <Card
+                    image="./img/code.jpg"
+                    title="We build it together"
+                    description="Build something that looks fancy for you and your users."
+                />
+            </GridItem>
+            <GridItem>
+                <Grid templateRows="1fr 1fr" gap={4}>
+                    <GridItem>
+                        <Card
+                            image="./img/code.jpg"
+                            title="Software Solutions"
+                            description="It's a perfect time to go digital"
+                        />
+                    </GridItem>
+                    <GridItem>
+                        <Card
+                            image="./img/code.jpg"
+                            title="Brands on the Go"
+                            description="Make the turn with us"
+                        />
+                    </GridItem>
+                </Grid>
+            </GridItem>
         </Grid>
     </Container>
 );

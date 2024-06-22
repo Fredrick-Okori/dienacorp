@@ -17,7 +17,7 @@ const NavBar = () => {
             width={{ base: "100%", md: "80%", lg: "70%" }}
             maxW="1200px"
             boxShadow="md"
-            rounded={{ base: 0, lg: 100 }}
+            rounded={{ base: 0, md: 100 }}
             px={4}
         >
             <Flex
