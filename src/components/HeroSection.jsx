@@ -12,25 +12,25 @@ const HeroSection = () => {
     return (
         <Box
             height="100vh"
-            backgroundImage="url('./src/img/hero.jpg')"
-            backgroundSize="cover"
-            backgroundPosition="center"
+            backgroundImage="url('../img/hero.png')"
             display="grid"
            margin='auto'
-            zIndex="-1"
-            
+          zIndex={-100}    
         >
-            <Box position="absolute" top="0" left="0" right="0" bottom="0" bg="blackAlpha.300"  />
+            <Box position="relative" zIndex={-100}  bg="blackAlpha.500"  />
             <VStack
-             
+                display="grid"
+                margin="auto"
                 spacing={6}
                 textAlign="center"
-                color="white"
-                display="grid"
-                margin='auto'
+                color='var(--clr-primary-1)'
+                justifyContent="center"
+                
                
             >
-                <Heading fontSize={"8xl"}>Digitizing your ideas..</Heading>
+                <Heading fontSize={"8xl"}
+                    color='var(--clr-primary-4)'
+                >Digitizing your ideas..</Heading>
                 <Text fontSize="xl" maxW="600px">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                 </Text>
