@@ -8,21 +8,21 @@ const NavBar = () => {
     return (
         <Box
             display="flex"
-            justifyContent="center"
-            alignItems="center"
+            
             position="fixed"
             zIndex={100}
             bg="var(--clr-primary-3)"
             color='var(--clr-primary-10)'
             width="100%"
-           maxW={1200}
-           
+          maxW={1200}
+            top={{base:0, lg: 15}}
             boxShadow="md"
             rounded={{ base: 0, lg: 100 }}
         >
             <Flex
                 width={{ base: '100%', md: '80%', lg: '70%' }}
                 justifyContent="space-between"
+              
                 alignItems="center"
                 p={7}
             >

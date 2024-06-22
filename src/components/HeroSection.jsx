@@ -7,6 +7,7 @@ import {
     Stack,
     Heading,
 } from '@chakra-ui/react';
+import ShowCase from './ShowCase';
 
 const HeroSection = () => {
     return (
@@ -19,8 +20,8 @@ const HeroSection = () => {
         >
             <Box position="relative" zIndex={-100}  bg="blackAlpha.500"  />
             <VStack
-                display="grid"
-                margin="auto"
+                display="flex"
+               
                 spacing={6}
                 textAlign="center"
                 color='var(--clr-primary-1)'
@@ -28,7 +29,7 @@ const HeroSection = () => {
                 
                
             >
-                <Heading fontSize={"8xl"}
+                <Heading fontSize={{base: "5xl", lg: '8xl'}}
                     color='var(--clr-primary-4)'
                 >Digitizing your ideas..</Heading>
                 <Text fontSize="xl" maxW="600px">
@@ -39,6 +40,8 @@ const HeroSection = () => {
                     <Button color="#c13d60" size="lg">Talk to Sales</Button>
                 </Stack>
             </VStack>
+            <ShowCase />
+           
         </Box>
     );
 };
