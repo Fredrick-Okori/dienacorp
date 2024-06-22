@@ -12,9 +12,9 @@ export default function Feature() {
                 color="var(--clr-primary-10)"
                 textAlign="center"
                
-            p={10}
+            p={-10}
             >
-                <Image rounded={5} src="./img/hero.jpg" alt="features" />
+                <Image  src="./img/bg.jpg" alt="features" />
                
             </Container>       
         </>
