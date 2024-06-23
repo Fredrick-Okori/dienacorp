@@ -12,10 +12,12 @@ import NavBar from './components/Navbar'
 import HeroSection from './components/HeroSection'
 import ShowCase from './components/ShowCase'
 import Feature from './components/Feature'
+import FloatingButton from './components/ChatBot'
+import Footer from './components/Footer'
 
 
 function App() {
- 
+
 
   return (
 
@@ -23,9 +25,11 @@ function App() {
     <>
       <ChakraProvider>
         <NavBar />
-        
+
         <HeroSection />
-        <Feature/>
+        <Feature />
+        <FloatingButton />
+        <Footer />
       </ChakraProvider>
     </>
   )

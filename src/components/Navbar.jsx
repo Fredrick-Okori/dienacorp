@@ -4,8 +4,10 @@ import {
     HStack, Link
 } from '@chakra-ui/react';
 
+import { Facebook, Twitter, Whatsapp, Instagram, } from 'react-bootstrap-icons';
+
 const NavBar = () => {
-    
+
     return (
         <Box
             position="fixed"
@@ -37,8 +39,17 @@ const NavBar = () => {
                     <Link href="/contact" fontWeight="medium">Contact</Link>
                 </HStack>
 
-                <Flex>
-                    <Text>Social media</Text>
+                <Flex gap={2}>
+                    <Text>
+                        <Facebook />
+                    </Text>
+                    <Text>
+                        <Twitter/>
+                    </Text>
+                  
+                    <Text>
+                        <Whatsapp />
+                    </Text>
                 </Flex>
             </Flex>
         </Box>
