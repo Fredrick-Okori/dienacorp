@@ -18,18 +18,18 @@ Variables
 
 :root {
   /* dark shades of primary color*/
-  --clr-primary-1: #470a1f;
-  --clr-primary-2: #801b40;
-  --clr-primary-3: #951c45;
-  --clr-primary-4: #b21e4b;
+  --clr-primary-1: #1703ad;
+  --clr-primary-2: #1a1254;
+  --clr-primary-3: #220bb7;
+  --clr-primary-4: #220bb7;
   /* primary/main color */
   --clr-primary-5: #d42a5b;
   /* lighter shades of primary color */
   --clr-primary-6: #e63f66;
   --clr-primary-7: #f27a93;
   --clr-primary-8: #f7aab9;
-  --clr-primary-9: #fbd0d9;
-  --clr-primary-10: #fde6e9;
+  --clr-primary-9: #bdc8ff;
+  --clr-primary-10: #bdc8ff;
   /* darkest grey - used for headings */
   --clr-grey-1: hsl(209, 61%, 16%);
   --clr-grey-2: hsl(211, 39%, 23%);

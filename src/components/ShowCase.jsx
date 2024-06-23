@@ -19,7 +19,7 @@ const Card = ({ image, title, description }) => (
             left="0"
             width="100%"
             height="100%"
-            bg="rgba(251, 208, 217, 0.8)"// Using rgba for opacity
+            bg="var(--clr-primary-9)"// Using rgba for opacity
         />
         <VStack
             position="relative"
@@ -31,7 +31,7 @@ const Card = ({ image, title, description }) => (
             align="start"
             spacing={2}
             justify="center"
-            color="var(--clr-primary-1)"
+            color="var(--clr-primary-2)"
         >
             <Text fontWeight="bold" fontSize="2xl">
                 {title}
@@ -39,7 +39,7 @@ const Card = ({ image, title, description }) => (
             <Text>
                 {description}
             </Text>
-            <Button colorScheme="whiteAlpha" variant="outline">Get Started</Button>
+            <Button colorScheme="whiteAlpha.500" variant="outline">Get Started</Button>
         </VStack>
     </Box>
 );

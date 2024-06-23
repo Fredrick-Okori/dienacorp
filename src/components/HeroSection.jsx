@@ -28,7 +28,7 @@ const HeroSection = () => {
             margin='auto'
           
         >
-            <Box position="relative" zIndex={-100}  bg="blackAlpha.500"  />
+           
             <VStack
              
                
