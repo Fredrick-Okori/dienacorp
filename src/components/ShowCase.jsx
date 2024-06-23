@@ -45,7 +45,7 @@ const Card = ({ image, title, description }) => (
 );
 
 const ShowCase = () => (
-    <Container maxW="container.xl">
+    <Container maxW="container.xl" mb={20}>
         <Grid templateColumns={{ base: "1fr", md: "2fr 1fr" }} gap={4}>
             <GridItem>
                 <Card

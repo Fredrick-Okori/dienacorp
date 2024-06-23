@@ -5,6 +5,7 @@ import {
 } from '@chakra-ui/react';
 
 const NavBar = () => {
+    
     return (
         <Box
             position="fixed"

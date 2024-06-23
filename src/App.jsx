@@ -23,8 +23,9 @@ function App() {
     <>
       <ChakraProvider>
         <NavBar />
+        
         <HeroSection />
-  <Feature/>
+        <Feature/>
       </ChakraProvider>
     </>
   )
