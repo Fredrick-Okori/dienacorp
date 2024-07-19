@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import {
     Box,
     VStack,
@@ -7,9 +7,19 @@ import {
     Stack,
     Heading,
 } from '@chakra-ui/react';
+
+import Aos from 'aos';
+
+import "aos/dist/aos.css"
+
 import ShowCase from './ShowCase';
 
 const HeroSection = () => {
+    useEffect(() => { 
+        Aos.init();
+        Aos.refresh();
+    }, [])
+
     return (
         <Box
             height="100vh"
@@ -30,7 +40,7 @@ const HeroSection = () => {
         >
            
             <VStack
-             
+                data-aos="zoom-in-up" data-aos-duration="2000"
                
                 mt={20}
                 pt={20}

@@ -1,14 +1,23 @@
-import React from 'react';
+import React,{useEffect} from 'react';
 import {
     Box, Flex, Text,
     HStack, Link
 } from '@chakra-ui/react';
 
-import { Facebook, Twitter, Whatsapp, Instagram, } from 'react-bootstrap-icons';
+import Aos from 'aos';
+import "aos/dist/aos.css";
+
+import { Facebook, Twitter, Whatsapp } from 'react-bootstrap-icons';
 
 const NavBar = () => {
 
+    useEffect(() => {
+        Aos.init();
+        Aos.refresh();
+    }, []);
+
     return (
+        <Box data-aos="slide-up" data-aos-duration="4000">
         <Box
             position="fixed"
             top={{ base: 0, lg: 15 }}
@@ -52,6 +61,7 @@ const NavBar = () => {
                     </Text>
                 </Flex>
             </Flex>
+            </Box>
         </Box>
     );
 };

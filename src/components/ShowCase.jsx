@@ -1,4 +1,7 @@
 import { Box, Button, Grid, GridItem, Container, Text, VStack } from "@chakra-ui/react";
+import Aos from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 
 const Card = ({ image, title, description }) => (
     <Box
@@ -7,7 +10,6 @@ const Card = ({ image, title, description }) => (
         borderRadius="md"
         overflow="hidden"
         boxShadow="md"
-        lazyLoading={true}
         bg={`url(${image})`}
         bgSize="cover"
         bgPosition="center"
@@ -19,7 +21,7 @@ const Card = ({ image, title, description }) => (
             left="0"
             width="100%"
             height="100%"
-            bg="var(--clr-primary-9)"// Using rgba for opacity
+            bg="rgba(0, 0, 0, 0.5)" // Updated to use rgba for opacity
         />
         <VStack
             position="relative"
@@ -31,7 +33,7 @@ const Card = ({ image, title, description }) => (
             align="start"
             spacing={2}
             justify="center"
-            color="var(--clr-primary-2)"
+            color="white"
         >
             <Text fontWeight="bold" fontSize="2xl">
                 {title}
@@ -39,41 +41,48 @@ const Card = ({ image, title, description }) => (
             <Text>
                 {description}
             </Text>
-            <Button colorScheme="whiteAlpha.500" variant="outline">Get Started</Button>
+            <Button colorScheme="whiteAlpha" variant="outline">Get Started</Button>
         </VStack>
     </Box>
 );
 
-const ShowCase = () => (
-    <Container maxW="container.xl" mb={20}>
-        <Grid templateColumns={{ base: "1fr", md: "2fr 1fr" }} gap={4}>
-            <GridItem>
-                <Card
-                    image="./img/code.jpg"
-                    title="We build it together"
-                    description="Build something that looks fancy for you and your users."
-                />
-            </GridItem>
-            <GridItem>
-                <Grid templateRows="1fr 1fr" gap={4}>
-                    <GridItem>
-                        <Card
-                            image="./img/code.jpg"
-                            title="Software Solutions"
-                            description="It's a perfect time to go digital"
-                        />
-                    </GridItem>
-                    <GridItem>
-                        <Card
-                            image="./img/code.jpg"
-                            title="Brands on the Go"
-                            description="Make the turn with us"
-                        />
-                    </GridItem>
-                </Grid>
-            </GridItem>
-        </Grid>
-    </Container>
-);
+const ShowCase = () => {
+    useEffect(() => {
+        Aos.init();
+        Aos.refresh();
+    }, []);
+
+    return (
+        <Container maxW="container.xl" mb={20}>
+            <Grid templateColumns={{ base: "1fr", md: "2fr 1fr" }} gap={4}>
+                <GridItem data-aos="fade-up-right" data-aos-duration='4000'>
+                    <Card
+                        image="./img/code.jpg"
+                        title="We build it together"
+                        description="Build something that looks fancy for you and your users."
+                    />
+                </GridItem>
+                <GridItem data-aos="slide-right">
+                    <Grid templateRows="1fr 1fr" gap={4}>
+                        <GridItem>
+                            <Card
+                                image="./img/code.jpg"
+                                title="Software Solutions"
+                                description="It's a perfect time to go digital"
+                            />
+                        </GridItem>
+                        <GridItem>
+                            <Card
+                                image="./img/code.jpg"
+                                title="Brands on the Go"
+                                description="Make the turn with us"
+                            />
+                        </GridItem>
+                    </Grid>
+                </GridItem>
+            </Grid>
+        </Container>
+    );
+};
 
 export default ShowCase;

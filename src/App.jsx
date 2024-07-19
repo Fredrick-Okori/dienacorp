@@ -1,6 +1,5 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+
 import './App.css'
 
 
@@ -14,6 +13,7 @@ import ShowCase from './components/ShowCase'
 import Feature from './components/Feature'
 import FloatingButton from './components/ChatBot'
 import Footer from './components/Footer'
+import Home from './views/Home'
 
 
 function App() {
@@ -26,8 +26,11 @@ function App() {
       <ChakraProvider>
         <NavBar />
 
-        <HeroSection />
-        <Feature />
+       
+        <Home />
+   
+
+
         <FloatingButton />
         <Footer />
       </ChakraProvider>
